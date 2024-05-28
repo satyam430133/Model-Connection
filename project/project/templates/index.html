@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Related Fields</title>
+</head>
+<body>
+    <h1>Related Fields for {{ model_a.name }}</h1>
+
+    {% for field_name, related_objects in related_fields.items %}
+        <h2>Related field: {{ description }}</h2>
+        <ul>
+            {% for obj in related_objects %}
+                <li>{{ obj }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
